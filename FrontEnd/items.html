@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>items</title>
+  <link rel="stylesheet" href="notMy/adminlte.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="notMy/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="notMy/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="notMy/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="notMy/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="notMy/daterangepicker-bs3.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <style>
+    .dataTables_filter {
+      text-align: right !important;
+    }
+
+    .delete{
+      padding: 5px;
+    }
+
+    table tbody tr{
+      cursor: pointer;
+    }
+
+    table tbody tr td{
+      vertical-align: middle !important;
+    }
+
+    .selected-row{
+      background-color: rgba(0, 48, 70, 0.16) !important;
+    }
+
+    #tblContainer{
+      overflow-y: scroll;
+    }
+
+  </style>
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+
+    <!-- Hom contact Search -->
+
+    <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+
+
+
+
+      <!-- SEARCH FORM -->
+
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+
+    </nav>
+
+
+
+    <!-- Main Sidebardflkgdflgjdfgd Container -->
+
+
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link">
+        <img src="img/logo.gif" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">Poin Of Sale System</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="img/pp.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Alexander Pierce</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fa fa-dashboard"></i>
+                <p>
+                  Starter Pages
+                  <i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+
+                  <li class="nav-item">
+                      <a href="index.html" class="nav-link">
+                          <i class="fas fa-home"></i>&ThinSpace;
+                        <p>Home</p>
+                  </a>
+
+                <li class="nav-item">
+                    <a href="customer.html" class="nav-link">
+                    <i class="fas fa-user-alt"></i>&ThinSpace;
+                    <p>Customer</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                    <i class="fas fa-drumstick-bite"></i>&ThinSpace;
+                    <p>Item</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="orders.html" class="nav-link">
+                    <i class="fas fa-cart-plus"></i>&ThinSpace;
+                    <p>Orders</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="viewOrders.html" class="nav-link">
+                    <i class="fas fa-eye"></i>&ThinSpace;
+                    <p>View Orders</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">Items</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Items</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <div class="content">
+          <div class="card card-success">
+              <div class="card-header">
+                <!-- <h3 class="card-title"><button type="button" class="btn btn-primary" id="btnAdd"><i class="fas fa-plus-circle"></i>&MediumSpace; ADD</button></h3> -->
+                <button type="button" class="btn btn-primary" id="btnAdd"><i class="fas fa-plus-circle"></i>&MediumSpace; ADD&MediumSpace;</button>&MediumSpace; Manage Items
+              </div>
+
+            <div class="container">
+              <form>
+                <div class="form-group">
+                  <label for="txtItemCode">Item Code</label>
+                  <input type="text" class="form-control" id="txtItemCode" placeholder="Item Code">
+                </div>
+                <div class="form-group">
+                  <label for="txtDescription">Description</label>
+                  <input type="text" class="form-control" id="txtDescription" placeholder="Description">
+                </div>
+                <div class="form-group">
+                  <label for="txtPrice">Price</label>
+                  <input type="text" class="form-control" id="txtPrice" placeholder="Unit Price">
+                </div>
+                <div class="form-group">
+                  <label for="txtqty">Quantity</label>
+                  <input type="text" class="form-control" id="txtqty" placeholder="Quantity">
+                </div>
+
+                <div class="box-footer">
+                  <button type="button" id="btnSave" class="btn btn-primary">Save</button>
+                  <button type="reset" class="btn btn-danger">Clear</button>
+
+                </div>
+
+              </form>
+
+              <br>
+
+              <div class="container">
+                <h1>ITEMS INFORMATION</h1>
+                <div style="height: 300px;" id="tblContainer">
+                  <table class="table" id="tblItems" >
+                    <thead>
+                    <tr>
+                      <th scope="col">ITEM CODE</th>
+                      <th scope="col">DESCRIPTION</th>
+                      <th scope="col">PRICE</th>
+                      <th scope="col">QUANTITY</th>
+                      <th scope="col">Option</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+
+
+            </div>
+                
+                
+          </div>
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content -->
+
+
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2019|Pos Developers</a>.</strong> All rights reserved.
+  </footer>
+  </div>
+  <!--<script src="js/jquery-3.3.1.min.js"> </script>-->
+  <!--<script src="js/formjs/items.js"></script>-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>
+  var SERVER_URL = "http://localhost:3002";
+
+
+  $(document).ready(function () {
+    console.log("wada");
+    loadAllItems();
+  });
+
+function loadAllItems() {
+
+  var ajaxConfig = {
+    method: "GET",
+    url: SERVER_URL + "/api/v1/items",
+    async: true
+  };
+
+  $.ajax(ajaxConfig).done(function (items, statusText, jxhr) {
+
+      items.forEach(function (item) {
+
+        var code =item.code;
+        var description =item.description;
+        var price=item.price;
+        var qty =item.qty;
+        var deletes =`<button type="button" class="btn btn-success delete">Delete</button>`;
+
+
+        var html =`<tr>
+                        <td>${code}</td>
+                        <td>${description}</td>
+                        <td>${price}</td>
+                        <td>${qty}</td>
+                        <td>${deletes}</td>
+                   </tr>`;
+
+
+        $("#tblItems tbody").append(html);
+
+        $("#tblItems tbody tr").off("click");
+        $("#tblItems tbody tr").click(function(){
+          $("#tblItems tbody tr").removeClass("selected-row");
+          $(this).addClass("selected-row");
+
+          $("#txtItemCode").val($(this).find("td:first-child").text());
+          $("#txtDescription").val($(this).find("td:nth-child(2)").text());
+          $("#txtItemCode").attr("disabled",true);
+          $("#txtPrice").val($(this).find("td:nth-child(3)").text());
+          $("#txtqty").val($(this).find("td:nth-child(4)").text());
+
+        });
+
+        $("button.delete").off("click");
+        $("button.delete").click(function(eventData){
+
+          eventData.stopPropagation();
+
+          var row = $(this).parents("tr");
+          var customerId = (row.find("td:first-child").text());
+
+          if (confirm("Are you sure to delete this Items?")){
+
+            var ajaxConfig = {
+              method : "DELETE",
+              url: SERVER_URL + "/api/v1/items/" + customerId,
+              async: true
+            }
+
+            $.ajax(ajaxConfig).done(function(response,statusText,jxhr){
+
+              $(row).remove();
+
+            }).fail(function(jxhr,statusText,error){
+
+              console.log(jxhr.responseText);
+
+            });
+
+          }
+        });
+
+      });
+
+
+
+  }).fail(function (jxhr, statusText, error) {
+
+
+
+  });
+
+}
+
+
+  $("#btnSave").click(function(){
+
+    if ($("#txtItemCode").attr("disabled")){
+
+      var item = {
+        code: $("#txtItemCode").val(),
+        description: $("#txtDescription").val(),
+        price: $("#txtPrice").val(),
+        qty: $("#txtqty").val()
+      };
+
+      var ajaxConfig = {
+        method: "PUT",
+        url: SERVER_URL + "/api/v1/items/" + $("#txtItemCode").val(),
+        async: true,
+        contentType: "application/json",
+        data: JSON.stringify(item)
+      }
+
+      $.ajax(ajaxConfig).done(function(response,statusText,jxhr){
+        alert("Updated Successfully");
+        $("#tblItems tbody tr").remove();
+        loadAllItems();
+        $('button[type="reset"]').trigger("click");
+      }).fail(function(jxhr,statusText,error){
+        alert("Unable to update the customer, try again");
+        console.log(error);
+      });
+
+    }else{
+
+      var item = {
+        code: $("#txtItemCode").val(),
+        description: $("#txtDescription").val(),
+        price: $("#txtPrice").val(),
+        qty: $("#txtqty").val()
+      };
+
+      var ajaxConfig = {
+        method: "POST",
+        url: SERVER_URL + "/api/v1/items/",
+        async: true,
+        contentType: "application/json",
+        data: JSON.stringify(item)
+      }
+
+      $.ajax(ajaxConfig).done(function(response,statusText,jxhr){
+        alert("Added Successfully");
+        loadAllItems();
+        $('button[type="reset"]').trigger("click");
+      }).fail(function(jxhr,statusText,error){
+        alert("Unable to save the item, try again");
+        console.log(error);
+      });
+
+
+    }
+
+  });
+
+  $('button[type="reset"]').click(function(){
+    $("#tblCustomers tbody tr").removeClass("selected-row");
+    $("#txtCustomerId").attr("disabled",false);
+  });
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
